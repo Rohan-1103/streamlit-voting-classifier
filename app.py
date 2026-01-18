@@ -71,10 +71,11 @@ if st.sidebar.button("Run Algorithm"):
     for i in range(len(accuracies)):
         st.sidebar.text("Accuracy for Model " + str(i+1) + " - " + str(accuracies[i]))
 
-    counter = 0
-    for i in st.beta_columns(len(figs)):
-        with i:
-            st.pyplot(figs[counter])
-            st.text(counter)
+    cols = st.columns(len(figs))
 
-        counter+=1
+    for idx, col in enumerate(cols):
+        with col:
+            st.pyplot(figs[idx])
+            st.text(idx)
+
+
