@@ -7,7 +7,7 @@ import data_helper
 concentric,linear,outlier,spiral,ushape,xor = data_helper.load_dataset()
 
 # configure matplotlib styling
-plt.style.use('seaborn-bright')
+plt.style.use('seaborn-v0_8-bright')
 
 # Dataset selection dropdown
 st.sidebar.markdown("# Voting Classifier")
@@ -76,4 +76,5 @@ if st.sidebar.button("Run Algorithm"):
         with i:
             st.pyplot(figs[counter])
             st.text(counter)
+
         counter+=1
