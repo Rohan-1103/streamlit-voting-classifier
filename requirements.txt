@@ -2,7 +2,3 @@ numpy
 pandas
 pyarrow
 scikit-learn
-sklearn
-streamlit
-
-
